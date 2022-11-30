@@ -1,4 +1,5 @@
 import { FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Task = (props) => {
   return (
@@ -14,6 +15,7 @@ const Task = (props) => {
         />
       </h3>
       <p>{props.task.day}</p>
+      <Link to={`/tasks/${props.task.id}`}>View Details</Link>
     </div>
   );
 };
